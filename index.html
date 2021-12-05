@@ -132,7 +132,7 @@ void main() {
 
 
 
-  vec3 tn = n - cross(Bs * n, Pt) + cross(Bt * n, Ps);
+  vec3 tn = n - cross(Bs * n*2.0, Pt) + cross(Bt * n*2.0, Ps);
   vec3 newN = normalize(tn);
   vec3 r = normalize(reflect(-l, newN));
   vec3 diffLight = 0.7*max(dot(newN,diffL),0.0)*c;
